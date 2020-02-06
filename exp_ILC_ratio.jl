@@ -1,3 +1,4 @@
+""" Experiment that checks observables for increasing number of nodes with iterative learning control"""
 using JLD2, FileIO, GraphIO
 using Distributed
 using Interpolations

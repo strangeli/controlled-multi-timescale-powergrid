@@ -581,6 +581,7 @@ function movingmean(t,int,a,b)
     mean(b[idx])
 end
 
+end
 
 #@doc """
 #    solver_test(prob::DiffEqBase.DEProblem)
