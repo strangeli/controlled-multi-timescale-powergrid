@@ -441,7 +441,7 @@ end
 
 function observer_basic_types(sol, i, freq_filter, energy_filter, freq_threshold) # what should be extracted from one run
 	omega_max = maximum(abs.(sol[freq_filter,:]))
-	ex = observables.frequency_exceedance(sol, freq_filter, freq_threshold, sol.prob.tspan[1])
+	ex = observables.frequency_exceedance(sol, freq_filter, freq_threshold, 1)
 	control_energy = observables.sum_abs_energy_last_days(sol, energy_filter, sol.prob.tspan[2]/(24*3600))
 	var_omega = var(sol,dims=2)[freq_filter]
 	var_ld = observables.var_last_days(sol, freq_filter, sol.prob.tspan[2]/(24*3600))

@@ -1,4 +1,4 @@
-""" Experiment that checks observables for increasing number of nodes with iterative learning control"""
+#""" Experiment that checks observables for increasing number of nodes with iterative learning control"""
 using JLD2, FileIO, GraphIO
 using Distributed
 using Interpolations
@@ -51,7 +51,7 @@ end
 
 @everywhere begin
 	N = 24
-	num_days =  30
+	num_days =  50
 	batch_size = 100
 	lambda_lst = 0.2:0.1:1
 	ilc_lst = 1:24
@@ -59,7 +59,7 @@ end
 end
 
 @everywhere begin
-	freq_threshold = 0.0005
+	freq_threshold = 0.001
 	obs_days = 10
 	phase_filter = 1:N
 	freq_filter = N+1:2N
@@ -138,7 +138,7 @@ cover4 = [] # ilc_covers
 # 	push!(cover4, Dict([vc4[i] => few]))
 # end
 # kappa4 = kappa_factor .* kappa4 .* 0.25
-lambda = 0.75
+lambda = 0.8
 
 _compound_pars = experiments.compound_pars(N, low_layer_control, kappa, vc4, cover4, lambda)
 

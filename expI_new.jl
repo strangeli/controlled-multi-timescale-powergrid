@@ -55,7 +55,7 @@ end
 end
 
 @everywhere begin
-	freq_threshold = 0.002
+	freq_threshold = 0.001
 	obs_days = 10
 	phase_filter = 1:N
 	freq_filter = N+1:2N

@@ -60,7 +60,7 @@ end
 
 @everywhere begin
 	batch_size = num_runs
-	freq_threshold = 0.0005
+	freq_threshold = 0.001
 	phase_filter = 1:N
 	freq_filter = N+1:2N
 	control_filter = 2N+1:3N
@@ -161,7 +161,7 @@ if calc
 	                     trajectories=num_monte,
 	                     batch_size=batch_size, EnsembleDistributed())
 
-						 jldopen("$dir/solutions/20200120_exp_ll_pars.jld2", true, true, true, IOStream) do file
+						 jldopen("$dir/solutions/20200209_exp_ll_pars.jld2", true, true, true, IOStream) do file
 					 		file["monte_prob"] = monte_prob
 					 		file["res"] = res
 					 	end

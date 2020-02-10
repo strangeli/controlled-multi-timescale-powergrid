@@ -499,23 +499,23 @@ function energy_cost_IV(
     ) ./ 3600.0
 end
 
-@doc """
-    max_abs_freq(time_series, freq_idx)
-
-Calculate the maximum absolute value of the frequency deviation.
-"""
-function max_abs_freq(time_series::DESolution, freq_idx = 1:2)
-    println("ToDo")
-end
-
-function surv(sol)
-    println("ToDo")
-end
-
-function control_energy(sol)
-    println("ToDo")
-end
-
+# @doc """
+#     max_abs_freq(time_series, freq_idx)
+#
+# Calculate the maximum absolute value of the frequency deviation.
+# """
+# function max_abs_freq(time_series::DESolution, freq_idx = 1:2)
+#     println("ToDo")
+# end
+#
+# function surv(sol)
+#     println("ToDo")
+# end
+#
+# function control_energy(sol)
+#     println("ToDo")
+# end
+#
 
 
 end
