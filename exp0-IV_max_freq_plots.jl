@@ -2,7 +2,7 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
         println("m ",m)
         lam = lambda_lst[m]
 
-    Max_freq_all_nodes_0I = DataFrame(Experiment = "0", Result = [p[1] for p in res_tl0.u][(m-1)*batch_size+1:m*batch_size])
+    Max_freq_all_nodes_0 = DataFrame(Experiment = "0", Result = [p[1] for p in res_tl0.u][(m-1)*batch_size+1:m*batch_size])
     Max_freq_all_nodes_I = DataFrame(Experiment = "I", Result = [p[1] for p in res_tlI.u][(m-1)*batch_size+1:m*batch_size])
     Max_freq_all_nodes_III = DataFrame(Experiment = "III", Result = [p[1] for p in res_tlIII.u][(m-1)*batch_size+1:m*batch_size])
     Max_freq_all_nodes_II = DataFrame(Experiment = "II", Result = [p[1] for p in res_tlII.u][(m-1)*batch_size+1:m*batch_size])
@@ -16,19 +16,19 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
                    xtickfontsize=14,
         		   guidefontsize=14,
         		   legendfontsize=10)
-        @df Max_freq_all_nodes_0I boxplot!(plt_ex0, :Experiment,:Result, fill=(0,0.5,:blue)) #,fill=(0,0.5,:orange)) # ,marker=(0.2,:blue,stroke(0))
+        @df Max_freq_all_nodes_0 boxplot!(plt_ex0, :Experiment,:Result, fill=(0,0.5,:blue)) #,fill=(0,0.5,:orange)) # ,marker=(0.2,:blue,stroke(0))
         @df Max_freq_all_nodes_I boxplot!(plt_ex0, :Experiment,:Result, fill=(0,0.5,:red)) # ,marker=(0.2,:blue,stroke(0))
         @df Max_freq_all_nodes_II boxplot!(plt_ex0, :Experiment,:Result, fill=(0,0.5,:green)) # ,marker=(0.2,:blue,stroke(0))
         @df Max_freq_all_nodes_III boxplot!(plt_ex0, :Experiment,:Result, fill=(0,0.5,:purple)) # ,marker=(0.2,:blue,stroke(0))
         @df Max_freq_all_nodes_IV boxplot!(plt_ex0, :Experiment,:Result,fill=(0,0.5,:orange)) # ,marker=(0.2,:blue,stroke(0))
         ylabel!("Max frequency deviation [rad/s]",guidefontsize=14)
 
-        plt_ex1 = plot(legend=false)#,ylims = (0.27,0.63))
-        @df Max_freq_all_nodes_IV boxplot!(plt_ex1, :Experiment,:Result,fill=(0,0.5,:orange), whisker_width=1) # ,marker=(0.2,:blue,stroke(0))
-        #ylabel!("Exceedance [s]")
-
-        l = @layout [a b{0.2w}]
-        plt_ex = plot(plt_ex0,plt_ex1, layout = l)
+        # plt_ex1 = plot(legend=false)#,ylims = (0.27,0.63))
+        # @df Max_freq_all_nodes_IV boxplot!(plt_ex1, :Experiment,:Result,fill=(0,0.5,:orange), whisker_width=1) # ,marker=(0.2,:blue,stroke(0))
+        # #ylabel!("Exceedance [s]")
+        #
+        # l = @layout [a b{0.2w}]
+        # plt_ex = plot(plt_ex0,plt_ex1, layout = l)
     end
     savefig(plt_ex0, "$dir/plots/$(date)/freq_dev_boxplot_lambda_$(lam).pdf")
 end

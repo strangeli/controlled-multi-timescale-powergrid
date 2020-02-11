@@ -1,8 +1,8 @@
 plt_c0 = plot(legend=false, dpi=150,
-					ytickfontsize=12,
-					xtickfontsize=12,
-					guidefontsize=12,
-					legendfontsize=12,
+					ytickfontsize=14,
+					xtickfontsize=14,
+					guidefontsize=14,
+					legendfontsize=14,
 					margin = 5Plots.mm,
 					xticks = (2:2:48, string.(2:2:24)))
 ylabel!("Overall cost (ILC nodes) [a.u.]")
@@ -10,10 +10,10 @@ xlabel!("Number of ILC nodes")
 
 
 plt_c1 = plot(legend=false, dpi=150,
-				ytickfontsize=12,
-				xtickfontsize=12,
-				guidefontsize=12,
-				legendfontsize=12,
+				ytickfontsize=14,
+				xtickfontsize=14,
+				guidefontsize=14,
+				legendfontsize=14,
 				margin = 5Plots.mm,
 				xticks = (2:2:48, string.(2:2:24)))
 ylabel!("Overall cost (non-ILC nodes) [a.u.]")
@@ -21,14 +21,14 @@ xlabel!("Number of ILC nodes")
 
 
 plt_c2 = plot(legend=false, dpi=150,
-						   ytickfontsize=12,
-						   xtickfontsize=12,
-						   guidefontsize=12,
-						   legendfontsize=12,
+						   ytickfontsize=14,
+						   xtickfontsize=14,
+						   guidefontsize=14,
+						   legendfontsize=14,
 	   					margin = 5Plots.mm,
 						 xticks = (2:2:48, string.(2:2:24)))
-ylabel!("Overall cost (all nodes) [a.u.]")
-xlabel!("Number of ILC nodes")
+ylabel!("Overall cost (all nodes) [a.u.]", guidefontsize=14)
+xlabel!("Number of ILC nodes", guidefontsize=14)
 
 
 

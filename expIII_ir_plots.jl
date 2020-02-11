@@ -20,12 +20,13 @@ end
 begin
 	N = 24
 	#num_days =  30
+	obs_days=10
 	#num_monte = 100
 	batch_size = 100
 end
 
 begin
-	freq_threshold = 0.002
+	freq_threshold = 0.001
 	phase_filter = 1:N
 	freq_filter = N+1:2N
 	control_filter = 2N+1:3N
@@ -46,14 +47,14 @@ function index_calc(i,batch_size)
 end
 
 using Dates
-date = Dates.today()  #- Dates.Day(8)
+date = Dates.today()  - Dates.Day(2)
 
-@load "$dir/solutions/$(date)/expIII_sol_ir_lambda_0.75.jld2" res_tlIII_ir monte_probIII_ir
+@load "$dir/solutions/$(date)/expIII_sol_ir_lambda_0.8.jld2" res_tlIII_ir monte_probIII_ir
 #res_tlIII_ir = res_tlIV_ir
 
 lamda = monte_probIII_ir.prob.p.hl.lambda
 
-date = Dates.today()
+date = Dates.today() - Dates.Day(1)
 if isdir("$dir/plots/$(date)") == false
 	mkdir("$dir/plots/$(date)")
 end

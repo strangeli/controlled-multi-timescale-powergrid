@@ -126,7 +126,7 @@ guidefontsize=12,
 legendfontsize=10)
 plot!(collect(0.2:0.1:1), y1, label = "I: local ILC all nodes",
            margin=8Plots.mm, dpi=600,
-           ytickfontsize=12,
+           ytickfontsize=12, yscale=:log10,
            xtickfontsize=12,
            guidefontsize=12,
            legendfontsize=10,lw=3, color = :red, alpha = 0.4,  lt=:scatter)

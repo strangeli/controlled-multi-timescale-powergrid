@@ -1,12 +1,12 @@
 plt_0 = plot(legend=false, dpi=150, #ylims = (0.15,0.3),
-                ytickfontsize=12,
-                xtickfontsize=12,
-                guidefontsize=12,
-                legendfontsize=12,
+                ytickfontsize=14,
+                xtickfontsize=14,
+                guidefontsize=14,
+                legendfontsize=14,
                 margin = 5Plots.mm,
                 xticks = (2:2:48, string.(2:2:24)))
-           ylabel!("Max frequency deviation [rad/s]",guidefontsize=12)
-           xlabel!("Number of ILC nodes",guidefontsize=12)
+           ylabel!("Max frequency deviation [rad/s]",guidefontsize=14)
+           xlabel!("Number of ILC nodes",guidefontsize=14)
 
 
 for m = 1:length(ilc_lst) # ilc_lst = 1:N
