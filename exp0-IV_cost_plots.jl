@@ -34,7 +34,7 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
         plt_cost = plot(plt_cost1,plt_cost0,layout = l)
     end
 
-    savefig(plt_cost, "$dir/plots/$(date)/cost_boxplot_lambda_$(lam).pdf")
+    savefig(plt_cost, "$dir/plots/$(date)/cost_boxplot_lambda_$(lam).svg")
 end
 
 ################################################
@@ -69,7 +69,7 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
     ylabel!("Overall cost [a.u.]")
 
 
-    savefig(plt_cost_ilc, "$dir/plots/$(date)/cost_boxplot_ilcnodes_lambda_$(lam).pdf")
+    savefig(plt_cost_ilc, "$dir/plots/$(date)/cost_boxplot_ilcnodes_lambda_$(lam).svg")
 end
 
 ################################################
@@ -138,5 +138,5 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
     ylabel!("Overall cost [a.u.]")
 
 
-    savefig(plt_cost_nonilc, "$dir/plots/$(date)/cost_boxplot_nonilcnodes_lambda_$(lam).pdf")
+    savefig(plt_cost_nonilc, "$dir/plots/$(date)/cost_boxplot_nonilcnodes_lambda_$(lam).svg")
 end

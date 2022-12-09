@@ -17,4 +17,4 @@ for m = 1:length(ilc_lst) # ilc_lst = 1:N
 
 end
 
-savefig(plt_ex0, "$dir/plots/$(date)/ir_ex_boxplot_ilc_$(lamda)_pc.pdf")
+savefig(plt_ex0, "$dir/plots/$(date)/ir_ex_boxplot_ilc_$(lamda)_pc.svg")

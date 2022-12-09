@@ -18,7 +18,7 @@ for m = 1:length(ilc_lst) # ilc_lst = 1:N
         @df Max_freq_all_nodes_III boxplot!(plt_0, :Experiment,:Result) # ,marker=(0.2,:blue,stroke(0))
     end
 end
-savefig(plt_0, "$dir/plots/$(date)/ir_freq_dev_boxplot_ilc_$(lamda).pdf")
+savefig(plt_0, "$dir/plots/$(date)/ir_freq_dev_boxplot_ilc_$(lamda).svg")
 
 
 

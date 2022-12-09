@@ -47,14 +47,14 @@ function index_calc(i,batch_size)
 end
 
 using Dates
-date = Dates.today()  - Dates.Day(2)
+date = Dates.Date(2020, 02, 09)
 
 @load "$dir/solutions/$(date)/expIII_sol_ir_lambda_0.8.jld2" res_tlIII_ir monte_probIII_ir
 #res_tlIII_ir = res_tlIV_ir
 
 lamda = monte_probIII_ir.prob.p.hl.lambda
 
-date = Dates.today() - Dates.Day(1)
+date = Dates.today()
 if isdir("$dir/plots/$(date)") == false
 	mkdir("$dir/plots/$(date)")
 end

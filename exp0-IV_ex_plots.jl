@@ -3,6 +3,7 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
         lam = lambda_lst[m]
 
     Ex_all_nodes_0 = DataFrame(Experiment = "0", Result = [p[2] for p in res_tl0.u][(m-1)*batch_size+1:m*batch_size]* 100. /(3600. * 24. * obs_days)) # no ilc
+    #println(Ex_all_nodes_0)
     Ex_all_nodes_I = DataFrame(Experiment = "I", Result = [p[2] for p in res_tlI.u][(m-1)*batch_size+1:m*batch_size] * 100. /(3600. * 24. * obs_days)) #local ilc all nodes
     Ex_all_nodes_III = DataFrame(Experiment = "III", Result = [p[2] for p in res_tlIII.u][(m-1)*batch_size+1:m*batch_size] * 100. /(3600. * 24. * obs_days)) # local ilc at vc
     Ex_all_nodes_II = DataFrame(Experiment = "II", Result = [p[2] for p in res_tlII.u][(m-1)*batch_size+1:m*batch_size] * 100. /(3600. * 24. * obs_days)) #ilc at vc \n+ neighbor. comm.
@@ -32,6 +33,6 @@ for m = 1:length(lambda_lst) # lambda = 0.2:0.1:1
         # plt_ex = plot(plt_ex1,plt_ex0,layout = l)
     end
 
-    savefig(plt_ex0, "$dir/plots/$(date)/ex_boxplot_lambda_$(lam).pdf")
+    savefig(plt_ex, "$dir/plots/$(date)/ex_boxplot_lambda_$(lam).pdf")
 
 end

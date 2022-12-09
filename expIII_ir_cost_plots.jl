@@ -93,6 +93,6 @@ for m = 1:length(ilc_lst)
 
 end
 
-savefig(plt_c0, "$dir/plots/$(date)/ir_cost_ILC_nodes_boxplot_$(lamda).pdf")
-savefig(plt_c1, "$dir/plots/$(date)/ir_cost_nonILC_nodes_boxplot_$(lamda).pdf")
-savefig(plt_c2, "$dir/plots/$(date)/ir_cost_all_nodes_boxplot_$(lamda).pdf")
+savefig(plt_c0, "$dir/plots/$(date)/ir_cost_ILC_nodes_boxplot_$(lamda).svg")
+savefig(plt_c1, "$dir/plots/$(date)/ir_cost_nonILC_nodes_boxplot_$(lamda).svg")
+savefig(plt_c2, "$dir/plots/$(date)/ir_cost_all_nodes_boxplot_$(lamda).svg")

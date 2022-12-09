@@ -39,7 +39,7 @@ end
 
 
 using Dates
-date = Dates.today() - Dates.Day(1)
+date = Dates.Date(2020, 02, 09)
 
 @load "$dir/solutions/$(date)/exp0_sol_new.jld2" res_tl0 monte_prob0
 @load "$dir/solutions/$(date)/expI_sol_new.jld2" res_tlI monte_probI
@@ -47,7 +47,7 @@ date = Dates.today() - Dates.Day(1)
 @load "$dir/solutions/$(date)/expIII_sol_new.jld2" res_tlIII monte_probIII
 @load "$dir/solutions/$(date)/expIV_sol_new.jld2" res_tlIV monte_probIV
 
-#date = Dates.today()
+date = Dates.today()
 
 if isdir("$dir/plots/$(date)") == false
 	mkdir("$dir/plots/$(date)")
@@ -85,11 +85,13 @@ lam = 0
 ###############################################
 @time include("exp0-IV_max_freq_plots.jl")
 ###########################################
-@time include("exp0-IV_control_energy_plots.jl")
+# @time include("exp0-IV_control_energy_plots.jl")
 
 @time include("exp0-IV_cost_plots.jl")
 
 ############################################
 # By experiment
 
-include("plot_by_exp.jl")
+# include("plot_by_exp.jl")
+
+include("plot_by_exp_svg.jl")

@@ -1,3 +1,5 @@
+#plotlyjs()
+
 
 plt_cost0 = plot(legend=false, margin=8Plots.mm)#, yscale=:log10)#, ylims=(1e4, 1e6))
 
@@ -15,7 +17,7 @@ ylabel!("Cost (mean)")
 xlabel!("Lambda")
 title!("0: no ILC")
 
-savefig("$dir/plots/$(date)/box_exp0_cost.png")
+savefig("$dir/plots/$(date)/box_exp0_cost.svg")
 
 #######################################################
 
@@ -35,7 +37,7 @@ ylabel!("Cost (mean)")
 xlabel!("Lambda")
 title!("I: local ILC all nodes")
 
-savefig("$dir/plots/$(date)/box_expI_cost.png")
+savefig("$dir/plots/$(date)/box_expI_cost.svg")
 
 #######################################################
 
@@ -56,7 +58,7 @@ ylabel!("Cost (mean)")
 xlabel!("Lambda")
 title!("II: local ILC at vc + neighbor. com")
 
-savefig("$dir/plots/$(date)/box_expII_cost.png")
+savefig("$dir/plots/$(date)/box_expII_cost.svg")
 
 ########################################################
 
@@ -76,7 +78,7 @@ ylabel!("Cost (mean)")
 xlabel!("Lambda")
 title!("III: local ILC at vc (no com)")
 
-savefig("$dir/plots/$(date)/box_expIII_cost.png")
+savefig("$dir/plots/$(date)/box_expIII_cost.svg")
 
 ##########################################################
 
@@ -96,7 +98,7 @@ ylabel!("Cost (mean)")
 xlabel!("Lambda")
 title!("IV: local ILC random 50% + rand com")
 
-savefig("$dir/plots/$(date)/box_expIV_cost.png")
+savefig("$dir/plots/$(date)/box_expIV_cost.svg")
 
 ########################################################################
 y0 = zeros(length(lambda_lst))
@@ -144,4 +146,4 @@ ylabel!("Average total cost [a.u.]")
 #plt = plot(plta,pltb, layout = l)
 
 
-savefig("$dir/plots/$(date)/box_cost_all_exp_total.pdf")
+savefig("$dir/plots/$(date)/box_cost_all_exp_total.svg")
